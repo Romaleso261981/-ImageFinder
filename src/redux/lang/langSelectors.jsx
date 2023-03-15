@@ -1,1 +1,1 @@
-export const getLang = (store) => store;
+export const getLang = (store) => store.language.lang;

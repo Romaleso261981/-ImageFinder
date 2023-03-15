@@ -19,10 +19,10 @@ const Register = createAsyncThunk('auth/register', async credentials => {
 const logIn = createAsyncThunk('auth/login', async credentials => {
   console.log('logIn');
   try {
-     console.log('logIn');
-     const data = await AUTH_API.post('/logIn', credentials);
-     console.log(data);
-     return data;
+    console.log('logIn');
+    const data = await AUTH_API.post('/logIn', credentials);
+    console.log(data);
+    return data;
   } catch (error) {
     const state = thunkAPI.getState();
     const { lang } = state.language.lang;
