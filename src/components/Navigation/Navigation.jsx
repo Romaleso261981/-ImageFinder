@@ -14,7 +14,7 @@ export function Navigation({
   //   password: 123456,
   // };
 
-  const user = null;
+  const user = true;
 
   return (
     <header className={styles.header}>
