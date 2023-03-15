@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
+import { useParams,  Outlet } from 'react-router-dom';
 import { BackBtn } from '../../BackBtn';
 import * as API from '../../../services/API';
 import styles from './MovieDetailsPage.module.css';
 
 function MovieDetailsPage() {
-  const { state } = useLocation();
   const [data, setData] = useState(null);
   const movieId = useParams().movieId;
 
