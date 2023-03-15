@@ -87,7 +87,7 @@ function App() {
               <Suspense fallback={<Louder />}>
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <MoviesPage
-                    data={sortMode ? sortMode : data}
+                    data={sortedItems ? sortedItems : data}
                     setPage={setPage}
                     page={page}
                     sortedItems={sortedItems}
