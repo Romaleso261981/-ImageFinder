@@ -6,7 +6,9 @@ import styles from './MoviesPage.module.css';
 function HomePage({ setPage, page, data, sortedItems }) {
   return (
     <>
-      <h2 className={styles.title}>Trending today</h2>
+      {sortedItems.length !== 0 && (
+        <h2 className={styles.title}>Trending today</h2>
+      )}
       <MoviesList
         page={page}
         setPage={setPage}
