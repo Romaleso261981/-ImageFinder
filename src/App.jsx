@@ -1,9 +1,9 @@
 import './App.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
 import { Navigation } from './components/Navigation';
 import { getTrendingMovies } from './services/API';
-import { theme, darkTheme } from './utils/theme';
+import { theme} from './utils/theme';
 import { selectIsLoggedIn } from './redux/auth/selectors';
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -87,7 +87,7 @@ function App() {
               <Suspense fallback={<Louder />}>
                 <PrivateRoute isLoggedIn={isLoggedIn}>
                   <MoviesPage
-                    data={sortedItems ? sortedItems : data}
+                    data={sortMode ? sortMode : data}
                     setPage={setPage}
                     page={page}
                     sortedItems={sortedItems}
